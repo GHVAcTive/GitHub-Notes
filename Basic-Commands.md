@@ -221,9 +221,7 @@ Let's say you have a branch called `feature/login` that you want to rename to `f
     git push origin --delete feature/auth
     ```
 
-Sure, here is a shorter version of the note about `:q!` in Vim:
 
-```markdown
 # Vim Command: `:q!` 🚪❌
 
 ## What is `:q!`? 🤔
