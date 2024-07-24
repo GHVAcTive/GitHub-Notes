@@ -147,13 +147,6 @@ git remote add origin <link>
 
 ## Renaming a Branch ✏️
 
-To rename a branch, follow these steps:
-
-1. **Switch to the branch you want to rename**:
-    ```bash
-    git checkout old-branch-name
-    ```
-
 2. **Rename the branch**:
     ```bash
     git branch -m new-branch-name
@@ -163,20 +156,6 @@ To rename a branch, follow these steps:
      git branch -m old-branch-name new-branch-name
      ```
 
-3. **Push the renamed branch to the remote repository**:
-    ```bash
-    git push origin new-branch-name
-    ```
-
-4. **Delete the old branch from the remote repository**:
-    ```bash
-    git push origin --delete old-branch-name
-    ```
-
-5. **Update the upstream branch (if needed)**:
-    ```bash
-    git push --set-upstream origin new-branch-name
-    ```
 
 ## Deleting a Branch 🗑️
 
@@ -200,29 +179,6 @@ To delete a branch, follow these steps:
     git push origin --delete branch-name
     ```
 
-### Example Scenario 🌟
-
-Let's say you have a branch called `feature/login` that you want to rename to `feature/auth` and then delete it after merging. Here's how you can do it:
-
-1. **Rename the branch**:
-    ```bash
-    git checkout feature/login
-    git branch -m feature/auth
-    git push origin feature/auth
-    git push origin --delete feature/login
-    git push --set-upstream origin feature/auth
-    ```
-
-2. **Merge and delete the branch**:
-    ```bash
-    git checkout main
-    git merge feature/auth
-    git branch -d feature/auth
-    git push origin --delete feature/auth
-    ```
-
-
-# Vim Command: `:q!` 🚪❌
 
 ## What is `:q!`? 🤔
 
@@ -230,32 +186,11 @@ Let's say you have a branch called `feature/login` that you want to rename to `f
 
 ## How to Use `:q!`? 🛠️
 
-1. **Open Vim**:
+1. **To Open the file using Vim**:
    ```sh
    vim filename.txt
    ```
 
-2. **Make Changes** ✍️:
-   - Edit the file as needed.
-
 3. **Quit Without Saving**:
    - Press `Esc` to enter Normal mode.
    - Type `:q!` and press `Enter`.
-     ```vim
-     :q!
-     ```
-
-## Example 📖
-
-```sh
-vim example.txt
-```
-```vim
-:q!
-```
-
-## Related Commands 🔍
-
-- `:q` - Quit (prompts to save if there are unsaved changes).
-- `:wq` - Save and quit.
-- `:w` - Save without quitting.
